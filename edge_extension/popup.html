@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edge 视频连接</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>视频字幕连接</h1>
+  <p>在桌面应用的「Edge 视频」页复制连接码，然后粘贴到下方。</p>
+  <label for="code">Edge 连接码</label>
+  <textarea id="code" rows="3" placeholder='{"port":18765,"token":"…"}' spellcheck="false" autocomplete="off"></textarea>
+  <details>
+    <summary>手动输入连接信息</summary>
+    <label for="port">本机端口</label>
+    <input id="port" type="number" min="1024" max="65535" value="18765">
+    <label for="token">连接令牌</label>
+    <input id="token" type="password" autocomplete="off">
+  </details>
+  <div class="actions">
+    <button id="connect" type="button">连接当前视频</button>
+    <button id="stop" class="secondary" type="button">停止连接</button>
+  </div>
+  <p class="hint">扩展需要网站权限来读取视频和字幕；来自其他网站的内容会列出域名，供你确认。</p>
+  <div id="permissionBox" hidden>
+    <strong>需要额外网站权限</strong>
+    <ul id="origins"></ul>
+    <button id="grant" type="button">允许访问以上域名</button>
+  </div>
+  <output id="status" aria-live="polite">正在读取状态…</output>
+  <div id="source"></div>
+  <div id="diagnostic" class="hint"></div>
+  <label id="panoptoLanguageBox" hidden>
+    <input id="panoptoDefaultEnglish" type="checkbox">
+    我已确认播放器的默认字幕是英语
+  </label>
+  <div id="warning" role="status"></div>
+  <p class="hint">应用重启后，请重新复制连接码。受保护的视频或字幕无法预读，可改用系统声音模式。</p>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

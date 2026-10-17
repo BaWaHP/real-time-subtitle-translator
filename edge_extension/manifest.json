@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Real-Time Subtitle · Edge 视频连接",
+  "version": "0.2.3",
+  "description": "将当前授权视频的英文字幕和播放进度发送给本机字幕翻译应用。",
+  "minimum_chrome_version": "116",
+  "permissions": ["activeTab", "scripting", "storage", "webNavigation"],
+  "host_permissions": ["http://127.0.0.1/*"],
+  "optional_host_permissions": ["https://*/*", "http://*/*"],
+  "background": {"service_worker": "background.js", "type": "module"},
+  "action": {"default_title": "连接视频字幕", "default_popup": "popup.html"},
+  "content_security_policy": {"extension_pages": "script-src 'self'; object-src 'self'"}
+}

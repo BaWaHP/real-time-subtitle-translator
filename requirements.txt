@@ -1,0 +1,12 @@
+# Python 3.11, Windows x64. CUDA runtime is optional; see README.
+PySide6>=6.8,<7
+faster-whisper>=1.2.1,<2
+PyAudioWPatch>=0.2.12.7,<0.3; sys_platform == 'win32'
+numpy>=1.26,<3
+soxr>=0.5,<2
+httpx>=0.28,<1
+PyJWT[crypto]>=2.10,<3
+keyring>=25,<26
+filelock>=3.18,<4
+yt-dlp>=2026.1.1
+imageio-ffmpeg>=0.6,<1

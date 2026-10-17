@@ -1,0 +1,1 @@
+{"private":true,"type":"module","scripts":{"test":"node --test ../tests/test_extension.mjs ../tests/test_content_probe.mjs ../tests/test_background.mjs ../tests/test_panopto_probe.mjs"}}

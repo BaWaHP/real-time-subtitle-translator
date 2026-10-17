@@ -1,0 +1,20 @@
+:root { color-scheme: light dark; font: 14px "Segoe UI", "Microsoft YaHei", sans-serif; }
+body { width: 350px; margin: 0; padding: 20px; background: #141b27; color: #e9eff9; }
+h1 { font-size: 21px; margin: 0 0 8px; }
+p { line-height: 1.5; margin: 8px 0 16px; }
+label { display: block; margin: 12px 0 6px; }
+input, textarea { width: 100%; box-sizing: border-box; padding: 8px; border: 1px solid #4b5b72; border-radius: 6px; background: #202c3f; color: #fff; }
+input[type="checkbox"] { width: auto; padding: 0; margin: 0 6px 0 0; vertical-align: middle; }
+[hidden] { display: none !important; }
+textarea { resize: vertical; font: 12px Consolas, monospace; }
+summary { margin-top: 9px; cursor: pointer; font-size: 12px; color: #bbcbdf; }
+.actions { display: flex; gap: 9px; margin-top: 17px; }
+button { border: 0; border-radius: 6px; padding: 10px 13px; background: #80bdff; color: #102239; font-weight: 600; cursor: pointer; }
+button.secondary { background: #34465f; color: #e9eff9; }
+button:disabled { opacity: .55; cursor: wait; }
+.hint { font-size: 12px; color: #aebed3; }
+#status { display: block; font-weight: 600; padding-top: 10px; border-top: 1px solid #3b4960; }
+#warning { color: #ffd18a; line-height: 1.5; margin-top: 8px; overflow-wrap: anywhere; }
+#source { color: #bbcbdf; margin-top: 6px; overflow-wrap: anywhere; }
+#permissionBox { background: #21334b; padding: 11px; margin-bottom: 15px; border-radius: 6px; }
+ul { padding-left: 20px; overflow-wrap: anywhere; }
