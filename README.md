@@ -10,7 +10,9 @@ Windows 11 x64 实时字幕翻译软件，支持系统声音和 Edge 视频两�
 winget install --id astral-sh.uv --exact
 ```
 
-下载并解压项目后，双击 `run.bat` 启动。首次启动会安装 Python 和依赖，语音模型则在第一次识别时下载。如果启动失败，关闭软件后运行 `setup.bat`，再尝试启动。
+下载并解压整个项目，双击 `Real-Time Subtitle Translator.exe` 启动。首次启动会安装 Python 和依赖，语音模型在第一次识别时下载。
+
+请将 EXE 留在项目目录中，可为它创建桌面快捷方式。如果启动失败，可运行 `run.bat` 查看错误，或运行 `setup.bat` 修复环境后重试。
 
 也可在项目目录手动安装运行：
 
@@ -50,6 +52,12 @@ uv pip install --python .venv\Scripts\python.exe -r requirements.txt
 如果 Edge 视频模式无法读取字幕或音轨，可以切换到系统声音模式。字幕延迟会受硬件和网络影响，部分独占全屏游戏也可能无法显示悬浮字幕。
 
 ## 测试
+
+修改启动器后，先关闭软件，再用 Windows 自带的 .NET Framework 编译器重新生成 EXE：
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\launcher\build.ps1
+```
 
 ```powershell
 uv pip install --python .venv\Scripts\python.exe -r requirements-dev.txt
